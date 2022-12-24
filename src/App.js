@@ -48,7 +48,6 @@ const App = () => {
         onChange={play}
       />
       <button onClick={submit}>Guess</button>
-      <p>{randomNumber}</p>
       <p>you Guess:{message}</p>
     </div>
   );
