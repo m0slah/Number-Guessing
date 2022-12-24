@@ -22,9 +22,9 @@ const App = () => {
       if (userGuess == randomNumber) {
         setMessage("Conguradulation");
       } else if (userGuess > randomNumber) {
-        setMessage("too high");
+        setMessage("Too High");
       } else {
-        setMessage("too low");
+        setMessage("Too Low");
       }
     }
     setUserCount(userCount + 1);
@@ -33,26 +33,39 @@ const App = () => {
 
   return (
     <div className="App">
-      <h3> Find The Number Between 1 and 100</h3>
-      <p>Total Round Play By User: {userCount}</p>
-      <p>
-        Your Guess :{" "}
-        {allGuessVal?.map((item, index) => {
-          return (
-            <span key={index}>
-              {item} {}
-            </span>
-          );
-        })}
-      </p>
-      <input
-        type="number"
-        placeholder="enter the number"
-        value={userGuess}
-        onChange={play}
-      />
-      <button onClick={submit}>Guess</button>
-      <p>you Guess:{message}</p>
+      <div className="container">
+        <h3 className="header"> Find The Number Between 1 and 100</h3>
+        <p>
+          Total Round Play By User: 
+          <span className="num-play"> {userCount}</span>
+        </p>
+        <p>
+          Your Guess: 
+          {allGuessVal?.map((item, index) => {
+            return (
+              <span className="number-Guess" key={index}>
+               {item} {}
+              </span>
+            );
+          })}
+        </p>
+        <div>
+          <input
+            type="number"
+            placeholder="enter the number"
+            className="input"
+            value={userGuess}
+            onChange={play}
+          />
+        </div>
+
+        <button className="btn" onClick={submit}>
+          Guess
+        </button>
+        <p>
+          Answared: <span className="message">{message}</span>
+        </p>
+      </div>
     </div>
   );
 };

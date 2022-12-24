@@ -2,3 +2,62 @@
   text-align: center;
 }
 
+.container {
+  margin: 100px auto;
+  border: 2px solid #000;
+  width: 50%;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 2px 3px 3px #A8D1D1;
+  padding: 10px;
+
+}
+
+.header {
+  background-color: #A8D1D1;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.num-play {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.number-Guess {
+  color: #205295;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.input {
+  outline: none;
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 2px 3px 3px #A8D1D1;
+}
+
+.btn {
+  padding: 10px 30px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #A8D1D1;
+}
+
+.btn:hover {
+  background-color: #007979;
+}
+
+.btn:active {
+  background-color: #0bd4d4;
+}
+
+
+.message {
+  color: red;
+  font-weight: 500;
+  font-size: 18px;
+}
