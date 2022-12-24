@@ -16,20 +16,24 @@ const App = () => {
   };
 
   const submit = () => {
-    if (userGuess == randomNumber) {
-      setMessage("Conguradulation");
-    } else if (userGuess > randomNumber) {
-      setMessage("too hight");
+    if (userGuess < 1 || userGuess > 100) {
+      alert("Please Between 1 and 100");
     } else {
-      setMessage("too low");
+      if (userGuess == randomNumber) {
+        setMessage("Conguradulation");
+      } else if (userGuess > randomNumber) {
+        setMessage("too high");
+      } else {
+        setMessage("too low");
+      }
     }
-
     setUserCount(userCount + 1);
     setAllGuessVal([...allGuessVal, userGuess]);
   };
 
   return (
     <div className="App">
+      <h3> Find The Number Between 1 and 100</h3>
       <p>Total Round Play By User: {userCount}</p>
       <p>
         Your Guess :{" "}
